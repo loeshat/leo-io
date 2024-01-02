@@ -1,0 +1,17 @@
+html,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.h1 {
+  color: #6b6b6b;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.h2 {
+  color: #a0a0a0;
+  font-size: 45px;
+}

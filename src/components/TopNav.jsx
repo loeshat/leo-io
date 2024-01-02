@@ -1,34 +1,53 @@
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import HomeIcon from '@mui/icons-material/Home';
+import "../styles/components/TopNav.css";
+import React from "react";
+import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { useNavigate, useLocation } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
+import MoodIcon from "@mui/icons-material/Mood";
+import WorkIcon from "@mui/icons-material/Work";
 
+const navItems = [
+  { path: "/", icon: HomeIcon, label: "Home" },
+  { path: "/profile", icon: MoodIcon, label: "Profile" },
+  { path: "/work", icon: WorkIcon, label: "Work" },
+];
 
 const TopNav = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   return (
-    <AppBar position='fixed'>
+    <AppBar position="static" className="navbar">
       <Toolbar>
-        <Button
-          size="large"
-          color="inherit"
-          startIcon={<HomeIcon />}
-          name='navbar-home'
-          sx={{ mr: 2 }}
-        >
-        </Button>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          BigBrain
-        </Typography>
-        <Button
-          color="inherit"
-          name='log-out'
-        />
+        <Box className="container">
+          {navItems.map((item, index) => (
+            <Box
+              key={index}
+              className={
+                location.pathname === item.path
+                  ? "appbar-component"
+                  : "appbar-component-disabled"
+              }
+              onClick={() => {
+                navigate(item.path);
+              }}
+            >
+              {location.pathname === item.path ? (
+                <item.icon />
+              ) : (
+                <item.icon className="disabled" />
+              )}
+              {location.pathname === item.path && (
+                <Typography style={{ fontWeight: "bold" }}>
+                  {item.label}
+                </Typography>
+              )}
+            </Box>
+          ))}
+        </Box>
       </Toolbar>
     </AppBar>
-
-  )
-}
+  );
+};
 
 export default TopNav;
