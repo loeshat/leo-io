@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/pages/pages.css";
 import { theme } from "../styles/Theme";
 import "../index.css";
-import { Container, Typography, Box, Divider } from "@mui/material";
+import { Container, Typography, Box, Divider, ImageList, ImageListItem } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import TopNav from "../components/TopNav";
@@ -115,12 +115,38 @@ const notableCourseResults2 = [
   },
 ];
 
+const drawingData = ["../assets/draw1.png", "../assets/draw2.png", "../assets/draw3.png", "../assets/draw4.png",]
+
 const HomePage = () => {
   const navigate = useNavigate();
 
   const handleResumeDownload = () => {
-    console.log("Resuming download");
+    const link = document.createElement('a');
+    link.href = "../pdf/leos-resume.pdf";
+    link.download = 'leos-resume.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  const openLinkInNewTab = (url) => {
+    window.open(url, '_blank');
   };
+
+  const openGmailWithDraft = () => {
+    const recipient = 'leoshii111@gmail.com';
+    const mailtoLink = `mailto:${recipient}`;
+    window.open(mailtoLink);
+  };
+
+  const scrollDown = () => {
+    window.scrollBy({
+      top: (window.innerHeight * 2),
+      behavior: 'smooth'
+    });
+  };
+
 
   return (
     <>
@@ -145,22 +171,22 @@ const HomePage = () => {
                 alignItems: "center",
               }}
             >
-              <EmailIcon fontSize="large" className="blue-icon" />
-              <GitHubIcon fontSize="large" className="blue-icon" />
-              <LinkedInIcon fontSize="large" className="blue-icon" />
+              <EmailIcon fontSize="large" className="blue-icon" onClick={() => openGmailWithDraft()} />
+              <GitHubIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://github.com/loeshat')} />
+              <LinkedInIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://www.linkedin.com/in/leo-shi111')} />
               <Box className="blue-button" onClick={handleResumeDownload}>
                 <ResumeIcon />
                 <Typography>Resume</Typography>
               </Box>
-              <Box className="blue-button">
+              <Box className="blue-button" onClick={() => scrollDown()}>
                 <CourseResultsIcon />
                 <Typography>Course Results</Typography>
               </Box>
             </Box>
           </Box>
         </Container>
-        <Box className="work-experience-container">
-          <Typography variant="h3" style={{ minWidth: "20vw" }}>
+        <Box className="work-experience-container" style={{ paddingRight: "5vw" }}>
+          <Typography variant="h3" style={{ minWidth: "20vw", paddingLeft: "3vw" }}>
             i've gained lots of leadership experience over my years
           </Typography>
           <Box className="work-container">
@@ -185,7 +211,7 @@ const HomePage = () => {
           </Box>
         </Box>
         <Container
-          style={{ marginLeft: "3vw", marginTop: "10vh", marginBottom: "10vh" }}
+          style={{ marginLeft: "3vw", marginTop: "10vh", marginBottom: "15vh" }}
         >
           <Typography variant="h3">notable course results</Typography>
           <Divider style={{ marginBottom: "30px", marginTop: "15px" }} />
@@ -217,6 +243,22 @@ const HomePage = () => {
             </Box>
           </Box>
         </Container>
+        <Box className="photos-container" style={{ paddingRight: "5vw" }}>
+          <Typography variant="h3">drawing projects</Typography>
+          <ImageList className="photos" sx={{ width: 1200, borderRadius: 5 }} cols={4} rowHeight={330} onClick={() => openLinkInNewTab('https://www.instagram.com/drawwithleoo/')}>
+            {drawingData.map((item) => (
+              <ImageListItem key={item} sx={{ borderRadius: 3 }}>
+                <img
+                  className="draw"
+                  srcSet={item}
+                  src={item}
+                  alt={"draw"}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Box>
       </ThemeProvider>
     </>
   );

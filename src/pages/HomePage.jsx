@@ -46,6 +46,12 @@ const pastWorkExperience = [
 const HomePage = () => {
   const navigate = useNavigate();
 
+  const openGmailWithDraft = () => {
+    const recipient = 'leoshii111@gmail.com';
+    const mailtoLink = `mailto:${recipient}`;
+    window.open(mailtoLink);
+  };
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -85,15 +91,15 @@ const HomePage = () => {
                 <WorkIcon />
                 <Typography>Some of my work</Typography>
               </Box>
-              <Box className="blue-button">
+              <Box className="blue-button" onClick={() => openGmailWithDraft()}>
                 <EmailIcon />
                 <Typography>Let's collaborate</Typography>
               </Box>
             </Box>
           </Box>
         </Container>
-        <Box className="work-experience-container">
-          <Typography variant="h3" style={{ minWidth: "20vw" }}>
+        <Box className="work-experience-container" style={{ paddingRight: "5vw" }} >
+          <Typography variant="h3" style={{ minWidth: "20vw", paddingLeft: "3vw" }}>
             here's some of the teams i've been a part of
           </Typography>
           <Box className="work-container">
