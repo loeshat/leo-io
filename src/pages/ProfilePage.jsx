@@ -4,7 +4,6 @@ import { theme } from "../styles/Theme";
 import "../index.css";
 import { Container, Typography, Box, Divider, ImageList, ImageListItem } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { useNavigate } from "react-router-dom";
 import TopNav from "../components/TopNav";
 import Slide from '@mui/material/Slide';
 
@@ -119,8 +118,6 @@ const notableCourseResults2 = [
 const drawingData = ["../assets/draw1.png", "../assets/draw2.png", "../assets/draw3.png", "../assets/draw4.png",]
 
 const HomePage = () => {
-  const navigate = useNavigate();
-
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = "../pdf/leos-resume.pdf";
