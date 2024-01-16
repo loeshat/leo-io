@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/pages/pages.css";
 import { theme } from "../styles/Theme";
 import "../index.css";
@@ -6,12 +6,11 @@ import { Container, Typography, Box } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import TopNav from "../components/TopNav";
+import Slide from '@mui/material/Slide';
 
 import MoodIcon from "@mui/icons-material/Mood";
 import WorkIcon from "@mui/icons-material/Work";
 import EmailIcon from "@mui/icons-material/Email";
-
-// import Macquarie from "../assets/macquarie.png";
 
 const pastWorkExperience = [
   {
@@ -59,43 +58,50 @@ const HomePage = () => {
         <Container style={{ marginLeft: "3vw" }}>
           <Box style={{ height: "90vh" }}>
             <Box style={{ paddingTop: "20vh" }}>
-              <Typography variant="h1">hey i'm Leo,</Typography>
-              <Typography variant="h2">
-                a computer science and commerce student at UNSW
-              </Typography>
+              <Slide in={true} direction="right" timeout={1000}>
+                <Typography variant="h1">hey i'm Leo,</Typography>
+              </Slide>
+              <Slide in={true} direction="right" timeout={1500}>
+                <Typography variant="h2">
+                  a computer science and commerce student at UNSW
+                </Typography>
+              </Slide>
             </Box>
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "flex-start",
-                gap: "20px",
-                flexDirection: "row",
-                marginTop: "10px",
-              }}
-            >
+            <Slide in={true} direction="right" timeout={2000}>
               <Box
-                className="blue-button"
-                onClick={() => {
-                  navigate("/profile");
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                  flexDirection: "row",
+                  marginTop: "10px",
                 }}
               >
-                <MoodIcon />
-                <Typography>About Me</Typography>
+                <Box
+                  className="blue-button"
+                  onClick={() => {
+                    navigate("/profile");
+                  }}
+                >
+                  <MoodIcon />
+                  <Typography>About Me</Typography>
+                </Box>
+                <Box
+                  className="blue-button"
+                  onClick={() => {
+                    navigate("/work");
+                  }}
+                >
+                  <WorkIcon />
+                  <Typography>Some of my work</Typography>
+                </Box>
+                <Box className="blue-button" onClick={() => openGmailWithDraft()}>
+                  <EmailIcon />
+                  <Typography>Let's collaborate</Typography>
+                </Box>
               </Box>
-              <Box
-                className="blue-button"
-                onClick={() => {
-                  navigate("/work");
-                }}
-              >
-                <WorkIcon />
-                <Typography>Some of my work</Typography>
-              </Box>
-              <Box className="blue-button" onClick={() => openGmailWithDraft()}>
-                <EmailIcon />
-                <Typography>Let's collaborate</Typography>
-              </Box>
-            </Box>
+            </Slide>
+
           </Box>
         </Container>
         <Box className="work-experience-container" style={{ paddingRight: "5vw" }} >
