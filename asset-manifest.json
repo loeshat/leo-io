@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/leo-io/static/css/main.9bb7f8a9.css",
+    "main.js": "/leo-io/static/js/main.591323ef.js",
+    "index.html": "/leo-io/index.html",
+    "main.9bb7f8a9.css.map": "/leo-io/static/css/main.9bb7f8a9.css.map",
+    "main.591323ef.js.map": "/leo-io/static/js/main.591323ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bb7f8a9.css",
+    "static/js/main.591323ef.js"
+  ]
+}
