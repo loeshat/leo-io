@@ -9,7 +9,7 @@ import WorkPage from "./pages/WorkPage";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/leo-io">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />
