@@ -11,9 +11,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/leo-io" element={<HomePage />} />
-        <Route path="/leo-io/profile" element={<ProfilePage />} />
-        <Route path="/leo-io/work" element={<WorkPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/work" element={<WorkPage />} />
       </Routes>
     </Router>
   );

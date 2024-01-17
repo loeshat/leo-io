@@ -7,9 +7,9 @@ import MoodIcon from "@mui/icons-material/Mood";
 import WorkIcon from "@mui/icons-material/Work";
 
 const navItems = [
-  { path: "/leo-io", icon: HomeIcon, label: "Home" },
-  { path: "/leo-io/profile", icon: MoodIcon, label: "Profile" },
-  { path: "/leo-io/work", icon: WorkIcon, label: "Work" },
+  { path: "/", icon: HomeIcon, label: "Home" },
+  { path: "/profile", icon: MoodIcon, label: "Profile" },
+  { path: "/work", icon: WorkIcon, label: "Work" },
 ];
 
 const TopNav = () => {
