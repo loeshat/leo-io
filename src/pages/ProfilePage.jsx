@@ -5,7 +5,6 @@ import "../index.css";
 import { Container, Typography, Box, Divider, ImageList, ImageListItem } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import TopNav from "../components/TopNav";
-import Slide from '@mui/material/Slide';
 
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -153,42 +152,34 @@ const HomePage = () => {
         <Container style={{ marginLeft: "3vw" }}>
           <Box style={{ height: "90vh" }}>
             <Box style={{ paddingTop: "20vh" }}>
-              <Slide in={true} direction="right" timeout={1000}>
-                <Typography variant="h1">Leo Shi</Typography>
-
-              </Slide>
-              <Slide in={true} direction="right" timeout={1500}>
-                <Typography variant="h2">
-                  penultimate student at UNSW majoring in finance and computer
-                  science
-                </Typography>
-
-              </Slide>
+              <Typography variant="h1">Leo Shi</Typography>
+              <Typography variant="h2">
+                penultimate student at UNSW majoring in finance and computer
+                science
+              </Typography>
             </Box>
-            <Slide in={true} direction="right" timeout={2000}>
-              <Box
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  gap: "20px",
-                  flexDirection: "row",
-                  marginTop: "10px",
-                  alignItems: "center",
-                }}
-              >
-                <EmailIcon fontSize="large" className="blue-icon" onClick={() => openGmailWithDraft()} />
-                <GitHubIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://github.com/loeshat')} />
-                <LinkedInIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://www.linkedin.com/in/leo-shi111')} />
-                <Box className="blue-button" onClick={handleResumeDownload}>
-                  <ResumeIcon />
-                  <Typography>Resume</Typography>
-                </Box>
-                <Box className="blue-button" onClick={() => scrollDown()}>
-                  <CourseResultsIcon />
-                  <Typography>Course Results</Typography>
-                </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                gap: "20px",
+                flexDirection: "row",
+                marginTop: "10px",
+                alignItems: "center",
+              }}
+            >
+              <EmailIcon fontSize="large" className="blue-icon" onClick={() => openGmailWithDraft()} />
+              <GitHubIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://github.com/loeshat')} />
+              <LinkedInIcon fontSize="large" className="blue-icon" onClick={() => openLinkInNewTab('https://www.linkedin.com/in/leo-shi111')} />
+              <Box className="blue-button" onClick={handleResumeDownload}>
+                <ResumeIcon />
+                <Typography>Resume</Typography>
               </Box>
-            </Slide>
+              <Box className="blue-button" onClick={() => scrollDown()}>
+                <CourseResultsIcon />
+                <Typography>Course Results</Typography>
+              </Box>
+            </Box>
           </Box>
         </Container>
         <Box className="work-experience-container" style={{ paddingRight: "5vw" }}>
@@ -221,7 +212,6 @@ const HomePage = () => {
         >
           <Typography variant="h3">notable course results</Typography>
           <Divider style={{ marginBottom: "30px", marginTop: "15px" }} />
-          <Typography variant="h5">For the most up-to-date statement, please reach out via email.</Typography>
           <Box
             className="course-container-big"
             style={{ marginBottom: "50px" }}
@@ -252,7 +242,7 @@ const HomePage = () => {
         </Container>
         <Box className="photos-container" style={{ paddingRight: "5vw" }}>
           <Typography variant="h3">drawing projects</Typography>
-          <ImageList className="photos" sx={{ width: 1200, borderRadius: 5, overflow: "hidden" }} cols={4} rowHeight={330} onClick={() => openLinkInNewTab('https://www.instagram.com/drawwithleoo/')}>
+          <ImageList className="photos" sx={{ width: 1200, borderRadius: 5 }} cols={4} rowHeight={330} onClick={() => openLinkInNewTab('https://www.instagram.com/drawwithleoo/')}>
             {drawingData.map((item) => (
               <ImageListItem key={item} sx={{ borderRadius: 3 }}>
                 <img
