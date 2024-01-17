@@ -11,33 +11,33 @@ const caseCompetitionInfo = [
   {
     title: '2023 FINS2615 Financial Recommendation Presentation - HD',
     question: " Q: Your team plays the role of Equities Analyst to deliver a “stock pitch” or buy/sell investment recommendation",
-    logo: "../assets/fins.png",
-    download: "../pdf/wow.pdf",
+    logo: "../leo-io/assets/fins.png",
+    download: "../leo-io/pdf/wow.pdf",
   },
   {
     title: '2022 Macquarie Group Case Competition - First Place',
     question: 'Q: How might Macquarie unlock the potential of open source code while ensuring cybersecurity is of utmost importance while contributing and/or leveraging open source code?',
-    logo: "../assets/macq-comp.png",
-    download: "../pdf/ace.pdf",
+    logo: "../leo-io/assets/macq-comp.png",
+    download: "../leo-io/pdf/ace.pdf",
   },
   {
     title: '2022 AWS ECIP Case Competition - Runner Up',
     question: 'Q: Should Ochre migrate their workload from on-premise to the cloud to help them be prepared for the Ochre x Local event? How could Ochre make use of AWS services to innovate?',
-    logo: "../assets/aws-comp.png",
-    download: "../pdf/ochre.pdf",
+    logo: "../leo-io/assets/aws-comp.png",
+    download: "../leo-io/pdf/ochre.pdf",
   },
   {
     title: '2021 WSP Case Competition - First Place',
     question: 'Q: How can we manage digital fatigue while remaining connected through technology?',
-    logo: "../assets/wsp-comp.png",
-    download: "../pdf/wsp.pdf",
+    logo: "../leo-io/assets/wsp-comp.png",
+    download: "../leo-io/pdf/wsp.pdf",
   },
 ];
 
 const researchReports = [
   {
     title: "Artificial Intelligence in Accounting",
-    download: "../pdf/ai.pdf",
+    download: "../leo-io/pdf/ai.pdf",
   }
 ]
 

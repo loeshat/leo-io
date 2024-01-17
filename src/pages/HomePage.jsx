@@ -23,7 +23,7 @@ const pastWorkExperience = [
       "Banking and Financial Services Sector | Customer Experience Team",
     skills:
       "User Experience (UX) · User Interface Design · Atlassian Suite · Jira · Business Analysis · Requirements Analysis · Salesforce Lightning · User Stories · Agile Project Management · Customer Experience",
-    logo: "/assets/macquarie.png",
+    logo: "/leo-io/assets/macquarie.png",
   },
   {
     company: "Trihalo Accountancy",
@@ -32,7 +32,7 @@ const pastWorkExperience = [
     description: "SME Business | Western Sydney Area",
     skills:
       "Office 365 · Xero · Astute · MYOB · Payroll Administration · Annual Reports · Accounts Payable & Receivable · Microsoft Excel",
-    logo: "/assets/trihalo.png",
+    logo: "/leo-io/assets/trihalo.png",
   },
   {
     company: "City Beach Australia",
@@ -40,7 +40,7 @@ const pastWorkExperience = [
     tenure: "Dec 2021 - Mar 2022",
     description: "Parramatta Branch",
     skills: "Sales · Retail · Customer Service · Store Mangement",
-    logo: "/assets/citybeach.png",
+    logo: "/leo-io/assets/citybeach.png",
   },
 ];
 

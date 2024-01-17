@@ -20,14 +20,14 @@ const pastLeadershipExperience = [
     tenure: "Jan 2022 - Oct 2023",
     skills:
       "Mentoring · Team Leadership · Event Planning · Workshop Presentation · Engineering Consulting · Charity Events · Liasoning",
-    logo: "../assets/engsoc.png",
+    logo: "../leo-io/assets/engsoc.png",
   },
   {
     company: "UNSW Engineering Society",
     role: "Industry Mentoring Program Participant",
     tenure: "Apr 2022 - Sep 2022",
     skills: "Leadership · Professional Preparation",
-    logo: "../assets/engsoc.png",
+    logo: "../leo-io/assets/engsoc.png",
   },
   {
     company: "Amazon Web Services",
@@ -35,21 +35,21 @@ const pastLeadershipExperience = [
     tenure: "Apr 2022 - May 2022",
     skills:
       "AWS Technology · Technology Consulting · Professional Preparation · Networking",
-    logo: "../assets/aws.png",
+    logo: "../leo-io/assets/aws.png",
   },
   {
     company: "UNSW CompClub",
     role: "Marketing and HR Subcom, Workshop Mentor",
     tenure: "Mar 2021 - Oct 2022",
     skills: "Mentoring · Marketing · Workshop Content Creation",
-    logo: "../assets/compclub.png",
+    logo: "../leo-io/assets/compclub.png",
   },
   {
     company: "James Ruse Agricultural High School",
     role: "Sports Captain and Prefect",
     tenure: "Apr 2022 - May 2022",
     skills: "Leadership · Event Planning and Execution · Presentation",
-    logo: "../assets/ruse.png",
+    logo: "../leo-io/assets/ruse.png",
   },
 ];
 
@@ -115,12 +115,12 @@ const notableCourseResults2 = [
   },
 ];
 
-const drawingData = ["../assets/draw1.png", "../assets/draw2.png", "../assets/draw3.png", "../assets/draw4.png",]
+const drawingData = ["../leo-io/assets/draw1.png", "../leo-io/assets/draw2.png", "../leo-io/assets/draw3.png", "../leo-io/assets/draw4.png",]
 
 const HomePage = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = "../pdf/leos-resume.pdf";
+    link.href = "../leo-io/pdf/leos-resume.pdf";
     link.download = 'leos-resume.pdf';
 
     document.body.appendChild(link);
@@ -249,7 +249,7 @@ const HomePage = () => {
         </Container>
         <Box className="photos-container" style={{ paddingRight: "5vw" }}>
           <Typography variant="h3">drawing projects</Typography>
-          <ImageList className="photos" sx={{ width: 1200, borderRadius: 5 }} cols={4} rowHeight={330} onClick={() => openLinkInNewTab('https://www.instagram.com/drawwithleoo/')}>
+          <ImageList className="photos" sx={{ width: 1200, borderRadius: 5, overflow: "hidden" }} cols={4} rowHeight={330} onClick={() => openLinkInNewTab('https://www.instagram.com/drawwithleoo/')}>
             {drawingData.map((item) => (
               <ImageListItem key={item} sx={{ borderRadius: 3 }}>
                 <img
