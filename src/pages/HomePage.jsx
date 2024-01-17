@@ -80,7 +80,7 @@ const HomePage = () => {
                 <Box
                   className="blue-button"
                   onClick={() => {
-                    navigate("/profile");
+                    navigate("/leo-io/profile");
                   }}
                 >
                   <MoodIcon />
@@ -89,7 +89,7 @@ const HomePage = () => {
                 <Box
                   className="blue-button"
                   onClick={() => {
-                    navigate("/work");
+                    navigate("/leo-io/work");
                   }}
                 >
                   <WorkIcon />
