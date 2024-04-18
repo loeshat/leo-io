@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/leo-io/static/css/main.9bb7f8a9.css",
-    "main.js": "/leo-io/static/js/main.d1f3f52f.js",
+    "main.css": "/leo-io/static/css/main.6b83fe22.css",
+    "main.js": "/leo-io/static/js/main.20485357.js",
     "index.html": "/leo-io/index.html",
-    "main.9bb7f8a9.css.map": "/leo-io/static/css/main.9bb7f8a9.css.map",
-    "main.d1f3f52f.js.map": "/leo-io/static/js/main.d1f3f52f.js.map"
+    "main.6b83fe22.css.map": "/leo-io/static/css/main.6b83fe22.css.map",
+    "main.20485357.js.map": "/leo-io/static/js/main.20485357.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bb7f8a9.css",
-    "static/js/main.d1f3f52f.js"
+    "static/css/main.6b83fe22.css",
+    "static/js/main.20485357.js"
   ]
 }
