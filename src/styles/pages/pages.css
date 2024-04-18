@@ -175,6 +175,17 @@ html {
   border-radius: 20px;
 }
 
+.design-box {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 25px;
+  max-width: 600px;
+  background-color: #dedede;
+  padding: 25px;
+  border-radius: 20px;
+}
+
 .download-button {
   display: flex;
   align-items: center;
