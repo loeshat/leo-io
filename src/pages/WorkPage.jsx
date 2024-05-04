@@ -16,6 +16,25 @@ const designProjectsInfo = [
     logo: "../leo-io/assets/tangy.png",
     link: "https://www.figma.com/file/I7GMziARoK8euZ8TZevWRK/TangyTimeTable---HiFi-Prototype---Week-7-Deliverable---COMP4511?type=design&node-id=0%3A1&mode=design&t=eOq1y05zWXRlDX9x-1",
   },
+  {
+    title: "CommBank App Improvements",
+    description: "Improvements towards CommBank’s mobile app to provide more in-depth spending analytics.",
+    logo: "../leo-io/assets/commbank.png",
+    link: "https://www.figma.com/file/Z3yyb0kaP7tscent41UEzJ/Commbank-Spendings-Revamp?type=design&node-id=39%3A3052&mode=design&t=5TMdtFbDN4l9VlPL-1"
+  },
+  {
+    title: "Live Share",
+    description: "Collaborative stories to promote greater Instagram stories usage and reduce repeated content.",
+    logo: "../leo-io/assets/live.png",
+    link: "https://www.figma.com/file/qwL747OQiZZ00bMbmFwDRo/Live-Share-Prototype?type=design&mode=design&t=5TMdtFbDN4l9VlPL-1"
+  },
+  {
+    title: "CrunchFitnessFitma",
+    description: "A workout application that tailors to the user and provides insightful analytics post-workout",
+    logo: "../leo-io/assets/crunch.png",
+    link: "https://www.figma.com/file/CurBmRqVqQSXyM7hUWKaLW/CrunchFitnessFitma?type=design&mode=design&t=5TMdtFbDN4l9VlPL-1"
+  },
+
 ]
 
 const caseCompetitionInfo = [
@@ -83,16 +102,16 @@ const HomePage = () => {
             <Typography variant="h3">design projects</Typography>
             <Divider style={{ marginBottom: "30px", marginTop: "15px" }} />
             <Typography variant="h5" style={{ marginBottom: "30px" }}>I'm a naturally creative person, so coming up with unique and good-looking designs are enjoyable for me. However, I've also begun applying design and heuristic principles towards my work</Typography>
-            <Box style={{ marginBottom: "50px" }}>
+            <Box style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '50px' }}>
               {designProjectsInfo.map((item, index) => (
-                <Box className="design-box">
-                  <Box component="img" src={item.logo} style={{ height: "150px", borderRadius: "15px" }} />
+                <Box key={index} className="design-box">
+                  <Box component="img" src={item.logo} style={{ height: "150px", borderRadius: "15px", marginBottom: '10px' }} />
                   <Box style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <Box>
                       <Typography variant="h6">{item.title}</Typography>
-                      <Typography variant="h5">{item.description}</Typography>
+                      <Typography variant="h5" style={{ fontSize: '15px' }}>{item.description}</Typography>
                     </Box>
-                    <Box className="download-button" onClick={() => { openLinkInNewTab(item.link) }}>
+                    <Box className="download-button" onClick={() => { openLinkInNewTab(item.link) }} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px' }}>
                       <LanguageIcon variant="lg" />
                       <Typography variant="lg">View Figma</Typography>
                     </Box>

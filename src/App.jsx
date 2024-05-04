@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
@@ -8,6 +8,11 @@ import ProfilePage from "./pages/ProfilePage";
 import WorkPage from "./pages/WorkPage";
 
 const App = () => {
+
+  useEffect(() => {
+    document.title = "Leo Shi";
+  }, []);
+
   return (
     <Router basename="/leo-io">
       <Routes>
