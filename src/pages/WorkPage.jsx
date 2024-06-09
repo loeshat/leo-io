@@ -23,6 +23,12 @@ const designProjectsInfo = [
     link: "https://www.figma.com/file/Z3yyb0kaP7tscent41UEzJ/Commbank-Spendings-Revamp?type=design&node-id=39%3A3052&mode=design&t=5TMdtFbDN4l9VlPL-1"
   },
   {
+    title: "Ryde Eastwood Oztag",
+    description: "An app to manage oztag teams, games, scores and schedules and improve refereeing scorekeeping",
+    logo: "../leo-io/assets/oztag.png",
+    link: "https://www.figma.com/design/FfrzStOvWRwIW3OuN69vaL/Ryde-Eastwood-Oztag-App?node-id=92-2219&t=nNZxMdQfpwbOTH9i-1"
+  },
+  {
     title: "Live Share",
     description: "Collaborative stories to promote greater Instagram stories usage and reduce repeated content.",
     logo: "../leo-io/assets/live.png",

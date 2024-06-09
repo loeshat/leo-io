@@ -158,7 +158,7 @@ const HomePage = () => {
               </Slide>
               <Slide in={true} direction="right" timeout={1500}>
                 <Typography variant="h2">
-                  penultimate student at UNSW majoring in finance and computer
+                  final student at UNSW majoring in finance and computer
                   science
                 </Typography>
               </Slide>
