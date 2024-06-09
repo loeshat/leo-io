@@ -82,6 +82,12 @@ const notableCourseResults = [
     description:
       "Introduction to problem-solving via programming, which aims to have students develop proficiency in using a high-level programming language",
   },
+  {
+    result: "86 | HD",
+    code: "FINS2643",
+    name: "Wealth Management & Client Engagement",
+    description: "Introduction of a professional financial planning process to manage personal finance, credit, investment and other wealth management tasks",
+  },
 ];
 
 const notableCourseResults2 = [
